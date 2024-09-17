@@ -101,4 +101,21 @@ public class ContactBook {
                     return true;
         return false;
     }
+
+    public int hasPhone(int phone) {
+        int i = 0;
+        boolean found = false;
+        int result = -1;
+        while (i<counter && !found)
+            if (contacts[i].getPhone() == phone)
+                found = true;
+            else
+                i++;
+        if (found) result = i;
+        return result;
+    }
+
+    public String getName(int pos) {
+        return contacts[pos].getName();
+    }
 }

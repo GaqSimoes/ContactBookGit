@@ -162,10 +162,11 @@ public class Main {
     private static void getName(Scanner in, ContactBook cBook) {
         int phone = in.nextInt();
         in.nextLine();
-       /* if (cBook.hasPhone(phone)) {
-            System.out.println(cBook.getName(phone));
+        int phonePos = cBook.hasPhone(phone);
+        if (phonePos >= 0) {
+            System.out.println(cBook.getName(phonePos));
         }
-        else System.out.println(PHONE_NOT_EXIST);*/
+        else System.out.println(PHONE_NOT_EXIST);
     }
 
     private static void existsPhone(ContactBook cBook) {
